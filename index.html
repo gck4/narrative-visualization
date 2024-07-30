@@ -28,6 +28,7 @@ var bar = d3.select('svg')
           });
 
 d3.select('svg')
+    .selectAll('rect')
         .on('click', function () {
             d3.select(this)
             .attr("fill", 'red');
