@@ -23,12 +23,15 @@ var bar = d3.select('svg')
           .attr('height', barHeight - 1)
           .attr('transform', function(d, i) {
             return "translate(0," + i * barHeight + ")";
-          });
-
-d3.select('svg')
-        .on('click', function () {
+          })
+          .on('click', function () {
             d3.select(this)
             .attr("fill", 'red');
-        });
+
+//d3.select('svg')
+        //.on('click', function () {
+            //d3.select(this)
+            //.attr("fill", 'red');
+        //});
 
 </script>
