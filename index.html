@@ -1,6 +1,6 @@
 <script src='https://d3js.org/d3.v4.min.js'></script>
 
-<h1>Hello!</h1>
+<h1>Hello!0</h1>
 
 <svg width='200' height='500'></svg>
 
@@ -24,5 +24,11 @@ var bar = d3.select('svg')
           .attr('transform', function(d, i) {
             return "translate(0," + i * barHeight + ")";
           });
+
+d3.select('svg')
+        .on('click', function () {
+            d3.select(this)
+            .attr("fill", 'darkblue');
+        });
 
 </script>
