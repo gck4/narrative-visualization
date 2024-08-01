@@ -35,7 +35,7 @@ d3.select('svg')
         });
     
 var zoom = d3.zoom()
-    .on(zoom,function(e) {d3.select('svg g').attr('transform',e.tranform);})
+    .on('zoom',function(e) {d3.select('svg g').attr('transform',e.transform);})
     
 d3.select('svg')
     .call(zoom);
