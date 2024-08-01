@@ -24,7 +24,7 @@ var bar = d3.select('svg')
           .attr('height', function(d) {  return d; })
           .attr('width', barHeight - 1)
           .attr('transform', function(d, i) {
-            return "translate(" + i * barHeight + ",i*(-1)";
+            return "translate(" + i * barHeight + ",i*(-1))";
           });
 
 d3.select('svg')
