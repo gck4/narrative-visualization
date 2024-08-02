@@ -15,6 +15,18 @@ d3.select('svg').call(d3.zoom().on("zoom", function () {
     }))
     .append("g");
 
+var x = d3.scaleLinear()
+    .domain([4, 8])
+    .range([ 0, 200 ]);
+  var xAxis = SVG.append("g")
+    .attr("transform", "translate(0," + 500 + ")")
+    .call(d3.axisBottom(x));
+
+  var y = d3.scaleLinear()
+    .domain([0, 9])
+    .range([ 500, 0]);
+  var yAxis = SVG.append("g")
+    .call(d3.axisLeft(y));
 
 var data = [80, 120, 60, 150, 200];
 
