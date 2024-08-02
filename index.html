@@ -1,6 +1,6 @@
 <script src='https://d3js.org/d3.v4.min.js'></script>
 
-<h1>Hello!00</h1>
+<h1>Hello!0</h1>
 
 <!-- <img src="MOSHED-2019-1-17-22-19-0.gif" alt="lol"> -->
 
@@ -20,7 +20,7 @@ var data = [80, 120, 60, 150, 200];
 
 var barHeight = 20;
 
-var bar = d3.select('svg')
+var bar = d3.select('svg g')
           .selectAll('rect')
           .data(data)
           .enter()
@@ -31,7 +31,7 @@ var bar = d3.select('svg')
             return "translate(" + i * barHeight + "," + (200 - d) + ")";
           });
 
-d3.select('svg')
+d3.select('svg g')
     .selectAll('rect')
         .on('click', function () {
             d3.select(this)
